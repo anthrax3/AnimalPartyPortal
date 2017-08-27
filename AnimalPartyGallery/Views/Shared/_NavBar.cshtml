@@ -1,0 +1,36 @@
+﻿
+<div  class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header" style="float:left;margin-left:55px">
+            <img title="Home" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/home.png" onclick="location.href='@Url.Action("Index", "Home")'" />
+            <img title="New Event" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/newEvent.png" onclick="location.href='@Url.Action("Create", "Post")'" />
+            <img title="Event List" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/eventList.png" onclick="location.href='@Url.Action("Index", "Post")'" />
+           
+            <img id="submitWeather" title="WeatherAPI" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/weather.png" onclick="location.href='@Url.Action("Weather", "Home")'" />
+            <img title="Privacy Permissions" id="adminButton" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/permissions.png" onclick="location.href='@Url.Action("Index", "Users")'" />
+            <img title="Contact" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/contacts.png" onclick="location.href='@Url.Action("Contact", "Home")'" />
+        </div>
+        
+       
+
+        <div class="navbar-collapse collapse">
+
+            @Html.Partial("_LoginPartial")
+            
+        </div>
+    </div>
+</div>
+
+<script>
+@*@Html.ActionLink("Admin", "About", "Home")*@
+    $(document).ready(function () {
+        $("#adminButton").click(function () {
+            if (User.Identity.IsAuthenticated)
+            location.href = "http://www.cnn.com";
+        });
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    });
+</script>

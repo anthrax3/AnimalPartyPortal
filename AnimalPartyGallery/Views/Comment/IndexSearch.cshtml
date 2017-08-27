@@ -1,0 +1,28 @@
+﻿@model IEnumerable<AnimalPartyGallery.Models.Comment>
+
+
+    <h2>Photo's Search Results</h2>
+
+<a href="@Url.Action("Index", "Post")" class="btn btn-primary btn-lg index-border-radius" style="font-weight: bold; margin-bottom: 10px;"><p style="margin:10px">Back to Event's</p></a>
+
+<br />
+
+@foreach (var item in Model)
+{
+
+    <div class="responsive">
+        <div class="gallery">
+            <div class="desc" style="font-weight: 900;">@item.Author</div>
+            <img src="@Html.DisplayFor(Model => item.Photo)" alt="Tal SAHAR" width="300" height="200">
+            <div class="desc">
+                <p style="color:#808080;font-weight:bold;">@item.Title<br />
+                <p class="greyText"> @item.Content</p>
+            </div>
+
+        </div>
+    </div>
+
+
+}
+
+

@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+        <div style="float: right;margin-right:60px">
+           
+               
+            <img title="Privacy Settings" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/register.png" onclick="location.href='@Url.Action("Index", "Manage")'" />
+
+            <a href="javascript:document.getElementById('logoutForm').submit()">
+                <img title="Logout" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/logout.ico" />
+            </a>
+        </div>
+    }
+}
+else
+{
+
+            <div style="float: right;margin-right:60px">
+                <img title="Register" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/register.png" onclick="location.href='@Url.Action("Register", "Account")'" />
+                <img title="Log in" data-toggle="tooltip" data-placement="bottom" class="icon test" src="~/Images/navbar-images/login.png" onclick="location.href='@Url.Action("Login", "Account")'" />
+            </div>
+
+            }

@@ -1,0 +1,278 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 85px;
+    padding-right: 85px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.pageContent h2 {
+    background: #eb6864;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+    border: 2px solid #ffffff;
+    box-shadow: 5px 5px 30px #888888;
+}
+
+.pageContent {
+    float: left;
+    width: 700px;
+    word-wrap: break-word;
+   
+}
+.side {
+    float: right;
+    width: 250px;
+    background: #eb6864;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    list-style: none;
+    box-shadow: 5px 5px 30px #888888;
+}
+
+    .side li {
+        color: white;
+        margin-bottom: 5px;
+        text-shadow: 1px 1px 5px #000000;
+    }
+footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+
+#googleMapEffect {
+    margin-left:23px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px #888888;
+    border: 2px solid #ffffff;
+}
+.rightPhoto {
+    float: right;
+  
+}
+.shadowBox {
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px #888888;
+    border: 2px solid #ffffff;
+}
+
+
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+div.desc {
+    padding: 5px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+
+.index-border-radius {
+    border-radius: 10px;
+    background-color: #eb6864;
+    border: 3px solid #ffffff;
+    padding: 10px;
+    box-shadow: 5px 5px 30px #888888;
+    font-family: "Trebuchet MS";
+}
+
+
+hr {
+    display: block;
+    border: 0px;
+    height: 50px;
+    background-image: url("http://www.siahdesign.com/images/birdie.png");
+}
+p{
+    color: #ffffff;
+    font-family:Arial;
+}
+
+h3{
+    color:#ffffff;
+}
+
+th{
+    color: #ffffff;
+    text-shadow: 2px 3px 10px #000000;
+}
+
+
+.greyText{
+    color: #808080;
+}
+.whiteText {
+    color: #ffffff;
+}
+
+label {
+    color: #ffffff;
+    font-family: "Trebuchet MS";
+    font-size:larger;
+}
+.btn-default {
+
+    color: #ffffff;
+    font-family: 'arial';
+    font-weight:bold;
+    font-size:larger;
+    margin:5px;
+    
+}
+
+th {
+    color: #ffffff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    margin: 5px;
+}
+
+.contactTexts {
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    margin: 5px;
+}
+.col-md-10{
+width:250px
+}
+
+.sideBarClass {
+    margin: 0px 10px 10px 10px;
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    font-size: 28px;
+    font-weight:bold;
+    
+
+}
+.icon {
+    margin:6px 15px 0px 15px;
+   width:40px;
+   height:40px;
+   
+}
+
+
+/* Tooltip */
+.test + .tooltip > .tooltip-inner {
+    background-color: #eb6864;
+    color: #FFFFFF;
+    border: 1px solid #ffffff;
+    padding: 15px;
+    font-size: 20px;
+   
+    font-family: News Cycle;
+    font-weight: bold;
+}
+/* Tooltip on top */
+.test + .tooltip.top > .tooltip-arrow {
+    border-top: 5px solid white;
+}
+/* Tooltip on bottom */
+.test + .tooltip.bottom > .tooltip-arrow {
+    border-bottom: 5px solid white;
+}
+/* Tooltip on left */
+.test + .tooltip.left > .tooltip-arrow {
+    border-left: 5px solid white;
+}
+/* Tooltip on right */
+.test + .tooltip.right > .tooltip-arrow {
+    border-right: 5px solid white;
+}
+
+
+
+
+#rowDiv {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+input[type="text"] {
+    height: 40px;
+    font-size: 20px;
+}
+
+
+
+show {
+    margin: auto;
+    width: 60%;
+}
+
+.myButton {
+    font-family: Trebuchet MS;
+    font-weight: bold;
+}

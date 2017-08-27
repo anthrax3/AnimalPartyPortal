@@ -1,0 +1,16 @@
+﻿@model AnimalPartyGallery.Models.Post
+
+<h2>@ViewBag.Title</h2>
+<div>
+    <h4>Post</h4>
+    
+   <img class="shadowBox" src="~/Images/delete.jpg" />
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> 
+            <a href="@Url.Action("Index", "Users",null)" class="btn btn-default">Back</a>
+        </div>
+    }
+</div>

@@ -1,0 +1,32 @@
+﻿
+<center>
+@using (Html.BeginForm("EventSearch", "Search"))
+{
+    <div class="sideBarClass th">
+        <li>Search For Event</li>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" name="eventName" class="form-control" placeholder="EventTitle">
+                <input type="text" name="eventProducer" class="form-control" placeholder="Producer">
+                <input type="text" name="keyWord" class="form-control" placeholder="KeyWord">
+            </div>
+            <button type="submit" class="btn btn-default"> <img title="Search" data-toggle="tooltip" type="submit" data-placement="bottom" class="icon test" src="~/Images/navbar-images/search.ico" />
+ </button>
+        </form>
+    </div>
+}
+@using (Html.BeginForm("PhotoSearch", "Search"))
+{<div class="sideBarClass">
+        <li>Search For Photo</li>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" name="photoTitle" class="form-control" placeholder="PhotoTitle">
+                <input type="text" name="advertiserName" class="form-control" placeholder="AdvertiserName">
+                <input type="text" name="keyWord" class="form-control" placeholder="KeyWord">
+            </div>
+            <button type="submit" class="btn btn-default"> <img title="Search" data-toggle="tooltip" type="submit" data-placement="bottom" class="icon test" src="~/Images/navbar-images/search.ico" />
+</form>
+    </div>
+}
+</center>
+

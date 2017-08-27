@@ -1,0 +1,44 @@
+﻿
+@model AnimalPartyGallery.Models.PostCommentModel
+
+<h2>@Html.DisplayFor(model => model.postList.First().Title)'s Gallery</h2>
+<div style="justify-content: space-between;">
+   
+
+        <img class="shadowBox" src="@Html.DisplayFor(model => model.postList.First().Photo)" alt="Tal SAHAR" style="max-height:300px;max-width:300px">
+  
+
+
+    <div class="index-border-radius" style="float: right;max-width:380px">
+       <p  style="margin:10px;font-size:17px">@Html.DisplayFor(model => model.postList.First().Content)</p> 
+    </div>
+
+</div>
+
+
+    <hr />
+<div style="justify-content: space-between;display: flex;">
+    <a href="@Url.Action("Create", "Comment", new {id = Model.postList.First().ID},null)" class="btn btn-primary btn-lg index-border-radius myButton"> <p style="margin:6px">Upload Photo</p></a>
+    <a href=@Url.Action("Index", "Hitchhiker", new { id = Model.postList.First().ID}, null) class="btn btn-primary btn-lg index-border-radius myButton"><p style="margin:6px">Hitchhikers</p></a>
+    <a href="@Url.Action("Index", "Post")" class="btn btn-primary btn-lg index-border-radius myButton"><p style="margin:6px">Back to Events</p></a>
+</div>
+    <br />
+
+        @foreach (var item in Model.commentList)
+        {
+
+            <div class="responsive">
+                <div class="gallery">
+                    <div class="desc" style="font-weight: 900;">@item.Author</div>
+                    <img  src="@Html.DisplayFor(Model => item.Photo)" alt="Tal SAHAR" width="300" height="200">
+                    <div class="desc"><p style="color:#808080;font-weight:bold;">@item.Title<br />
+                       <p class="greyText"> @item.Content</p></div>
+                    
+                </div>
+            </div>
+
+
+        }
+
+    
+  

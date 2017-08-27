@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AnimalPartyGallery.Models.Hitchhiker>
+<h2>@ViewBag.EventName's Hitchhikers</h2>
+<div class="index-border-radius">
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Produced Events</th>
+                <th>Published Photos</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr class="danger">
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+                        <td>@Html.ActionLink("Link", "EventSearch", "Search", new { eventProducer = item.Name }, null)</td>
+                        <td>@Html.ActionLink("Link", "PhotoSearch", "Search", new { advertiserName = item.Name }, null)</td>
+                    </tr>
+                }
+            }
+
+
+        </tbody>
+    </table>
+</div>

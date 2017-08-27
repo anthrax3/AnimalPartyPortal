@@ -1,0 +1,78 @@
+﻿@model AnimalPartyGallery.Models.Comment
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+        <div  class="form-horizontal">
+            <h2>Upload Photo</h2>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-horizontal index-border-radius" style="float: left;width: auto;">
+                <div style=" margin: 0px 10px 0px 10px">
+
+                    @Html.HiddenFor(model => model.RefferedPost)
+
+                    <label>Photo's Title</label>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <label>Phone (If you are hitchiker)</label>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <label>Photo's Content</label>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            @Html.TextAreaFor(model => model.Content, new { @class = "form-control", @cols = 80, @rows = 5 })
+
+                            @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <label>Photo's URL</label>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Photo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <label>Hitchhiker?</label>
+                  
+                            @Html.EditorFor(model => model.Hitchhiker)
+                      
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input type="submit" value="Create" class="btn btn-default" />
+
+                            <a href="@Url.Action("Details", "Post", new {id = Model.RefferedPost},null)" class="btn btn-default">Back</a>
+
+                        </div>
+                        </div>
+                </div>
+            </div>
+                </div>
+                <img class="rightPhoto shadowBox" box-shadow: src="~/Images/createPhoto.jpg" width="380" height="530" style="float:right;" />
+
+
+
+                }
+
+
+                @section Scripts {
+                    @Scripts.Render("~/bundles/jqueryval")
+                }

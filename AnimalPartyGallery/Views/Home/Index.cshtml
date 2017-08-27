@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AnimalPartyGallery.Models.Post>
+
+
+<div class="row">
+    <h2>Upcoming Events!</h2>
+    @foreach (var post in Model)
+    {   <hr />
+        <div style="display:inline-block; margin: 10px 0px 10px 0px">
+            <div class="index-border-radius" style="float:left;width: 275px;">
+                <div style="margin:0px 10px 0px 10px">
+                    <!--event details-->
+                    <h5>
+                        Posted by @Html.DisplayFor(modelItem => post.Producer)<br />
+                        Phone: @Html.DisplayFor(modelItem => post.PhoneNumber)
+                    </h5>
+                    <h3>
+                        @Html.DisplayFor(modelItem => post.Title)<br /></h3>
+                    <h4>
+                        In @Html.DisplayFor(modelItem => post.Date)
+                    </h4>
+                    <p>@Html.DisplayFor(modelItem => post.Content)</p>
+                    <div class="nav nav-pills">
+                        <li class="active"><a href="@Url.Action("Details", "Post", new {id = post.ID},null)">Album <span class="badge" style=" font-family: Arial">@Html.DisplayFor(modelItem => post.Comments.Count)</span></a></li>
+                    </div>
+                    
+                    <iframe id="googleMapEffect" src="@Html.DisplayFor(modelItem => post.GoogleMap)" width="200" height="200" frameborder="0" style="border:0; align-items:center" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!--photo & video-->
+            <img class="rightPhoto shadowBox" src=@Html.DisplayFor(modelItem => post.Photo) />
+            <iframe class="rightPhoto shadowBox" src="@Html.DisplayFor(modelItem => post.Video)" frameborder="0" allowfullscreen style="float: right;margin-top: 10px;"></iframe>
+            
+
+            
+        </div>
+
+    }
+
+</div>
+<script>
+    $(document).ready(function () {
+        $("p").css("font-size", "17px");
+    });
+    $(document).ready(function () {
+        $(".rightPhoto").width(450).height(300);
+    });
+
+</script>
